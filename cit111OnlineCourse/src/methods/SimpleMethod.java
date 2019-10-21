@@ -5,6 +5,9 @@
  */
 package methods;
 
+import java.math.BigInteger;
+import java.util.Random;
+
 /**
  *
  * @author zachary.charlton
@@ -17,7 +20,7 @@ public class SimpleMethod {
         //second method stackes
         printStatement();
         System.out.println("After method: main");
-
+        generateBigNumber();
     }
 
     public static void printStatement() {
@@ -28,6 +31,16 @@ public class SimpleMethod {
     }//close method printSpecialStatement
 
     //generate big number
-    
+    public static void generateBigNumber() {
+        System.out.println("*****INISIDE generateBigNumber*****");
+        //create a freindly random # generator
+        Random r = new Random();
+        //create an object to do math
+        BigInteger bigInt = new BigInteger(150, r);
+        //display the random generate huge #
+        System.out.println(bigInt);
+        System.out.println("**********************************");
+    }//close method generateBigNumber
+
 }//close class
 
